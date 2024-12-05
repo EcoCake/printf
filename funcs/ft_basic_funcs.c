@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 20:00:53 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/04 21:11:15 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:48:35 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,24 @@ int ft_putchar(char c)
 }
 int	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
+	int len;
+	
+	if (!str)
 	{
-		ft_putchar(str[i]);
-		i++;
+		ft_putstr("(null)");
+		return (6);
 	}
-	return (i);
+	len = ft_strlen(str);
+	write(1, str, len);
+	return (len);
+}
+int ft_putnumb(int n)
+{
+	int len;
+	char *str;
+	
+	str = ft_itoa(n);
+	len = ft_putstr(str);
+	free(str);
+	return (len);
 }
