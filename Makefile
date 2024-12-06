@@ -6,7 +6,7 @@
 #    By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 19:37:03 by amezoe            #+#    #+#              #
-#    Updated: 2024/12/06 16:04:59 by amezoe           ###   ########.fr        #
+#    Updated: 2024/12/06 16:29:40 by amezoe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,11 @@ NAME			= libftprintf.a
 LIBFT			= ./libft/libft.a
 LIBFTDIR		= ./libft
 
-SRC_FILES		= ./files
+SRC_DIR			= ./files
+SRC_FILES		= ft_hexadecimal.c ft_pointers.c ft_unsigned.c ft_basic_funcs.c ft_printf.c
+SRCS			= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
-PRINTF_SRCS		= ft_printf.c ft_hexadecimal.c ft_pointers.c \
-				ft_unsigned.c ft_basic_funcs.c
-					
-OBJS			= $(PRINTF_SRCS:.c=.o)
+OBJS			= $(SRCS:.c=.o)
 
 CC				= cc
 AR				= ar rcs
@@ -31,22 +30,22 @@ CP				= cp
 all:			$(NAME)
 
 $(NAME): 		$(LIBFT) $(OBJS)
-					$(CP) $(LIBFT) $(NAME)
-					@$(AR) $(NAME) $(OBJS)
+				$(CP) $(LIBFT) $(NAME)
+				$(AR) $(NAME) $(OBJS)
 
 $(LIBFT): 		$(LIBFTDIR)
-					@$(MAKE) -C $(LIBFTDIR)
+				@$(MAKE) -C $(LIBFTDIR)
 
-%.o:			$(SRC)/%.c
-					@$(CC) $(CFLAGS) -c $< -o $@
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
+				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 				@$(MAKE) clean -C $(LIBFTDIR)
-				@$(RM) $(OBJS)
+				$(RM) $(OBJS)
 
 fclean:			clean
 				@$(MAKE) fclean -C $(LIBFTDIR)
-				@$(RM) $(NAME)
+				$(RM) $(NAME)
 
 re:				fclean all
 

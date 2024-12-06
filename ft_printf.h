@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:33:39 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 15:57:43 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/06 16:23:35 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <unistd.h>
 #include <stdarg.h>
-#include <../libft/libft.h>
+#include "libft/libft.h"
 
 int		ft_putchar(char c);
 int		ft_putstr(char *str);

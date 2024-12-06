@@ -6,11 +6,11 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 15:06:16 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 15:16:12 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/06 16:13:41 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf/ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_numblength(unsigned int n)
 {

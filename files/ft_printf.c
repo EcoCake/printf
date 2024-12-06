@@ -6,11 +6,11 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:24:46 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 15:54:29 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/06 16:13:50 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf/ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_printf_args (va_list args, const char format)
 {

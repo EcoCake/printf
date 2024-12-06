@@ -6,11 +6,11 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:05:38 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/05 14:12:05 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/06 16:27:32 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf/ft_printf.h"
+#include "../ft_printf.h"
 
 int ft_pointercount(unsigned long long n)
 {
@@ -33,7 +33,7 @@ int ft_pointerprint(unsigned long long n)
 	else
 	{
 		if (n < 10)
-			ft_putchar(n + '48');
+			ft_putchar(n + 48);
 		else
 			ft_putchar(n - 10 + 'a');
 	}
