@@ -6,7 +6,7 @@
 #    By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 19:37:03 by amezoe            #+#    #+#              #
-#    Updated: 2024/12/04 19:49:33 by amezoe           ###   ########.fr        #
+#    Updated: 2024/12/06 16:04:59 by amezoe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,10 @@ NAME			= libftprintf.a
 LIBFT			= ./libft/libft.a
 LIBFTDIR		= ./libft
 
-SRC				= ./files
+SRC_FILES		= ./files
 
-PRINTF_SRCS		= ft_printf.c ft_printf_hexa.c ft_printf_p.c \
-					ft_printf_unsigned.c ft_printf_funcs.c 
+PRINTF_SRCS		= ft_printf.c ft_hexadecimal.c ft_pointers.c \
+				ft_unsigned.c ft_basic_funcs.c
 					
 OBJS			= $(PRINTF_SRCS:.c=.o)
 
