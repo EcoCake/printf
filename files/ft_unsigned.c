@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 15:06:16 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 16:13:41 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/10 17:48:44 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_numblength(unsigned int n)
 {
-	int len;
+	int	len;
+
 	len = 0;
-	
 	while (n != 0)
 	{
 		len++;
@@ -24,13 +24,14 @@ int	ft_numblength(unsigned int n)
 	}
 	return (len);
 }
+
 char	*ft_utoa(unsigned int n)
 {
 	char	*num;
 	int		len;
-	
+
 	len = ft_numblength(n);
-	num = (char*)malloc((len +1) * sizeof(char *));
+	num = (char *)malloc ((len + 1) * sizeof (char *));
 	if (!num)
 		return (NULL);
 	num[len] = '\0';
@@ -42,10 +43,12 @@ char	*ft_utoa(unsigned int n)
 	}
 	return (num);
 }
-int ft_unsignedput(unsigned int n)
+
+int	ft_unsignedput(unsigned int n)
 {
 	int		len;
 	char	*num;
+
 	len = 0;
 	if (n == 0)
 		len += write (1, "0", 1);
@@ -53,7 +56,7 @@ int ft_unsignedput(unsigned int n)
 	{
 		num = ft_utoa(n);
 		len += ft_putstr(num);
-		free(num);	
+		free (num);
 	}
 	return (len);
 }

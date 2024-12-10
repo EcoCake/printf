@@ -6,15 +6,16 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:05:38 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 16:27:32 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/10 17:51:58 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int ft_pointercount(unsigned long long n)
+int	ft_pointercount(unsigned long long n)
 {
-	int count;
+	int	count;
+
 	count = 0;
 	while (n != 0)
 	{
@@ -23,7 +24,8 @@ int ft_pointercount(unsigned long long n)
 	}
 	return (count);
 }
-int ft_pointerprint(unsigned long long n)
+
+int	ft_pointerprint(unsigned long long n)
 {
 	if (n >= 16)
 	{
@@ -39,16 +41,18 @@ int ft_pointerprint(unsigned long long n)
 	}
 	return (ft_pointercount(n));
 }
-int ft_pointerput(unsigned long long n)
+
+int	ft_pointerput(unsigned long long n)
 {
-	int len;
+	int	len;
+
 	len = 0;
 	if (n == 0)
 	{
-		len += write(1, "NULL", 4);
+		len += write(1, "(nil)", 5);
 		return (len);
 	}
 	len = write(1, "0x", 2);
 	len += ft_pointerprint(n);
 	return (len);
-}		
+}

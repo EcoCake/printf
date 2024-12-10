@@ -6,13 +6,13 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:24:46 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 16:13:50 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/10 17:52:58 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_printf_args (va_list args, const char format)
+int	ft_printf_args(va_list args, const char format)
 {
 	if (format == 'c')
 		return (ft_putchar(va_arg(args, int)));
@@ -33,14 +33,14 @@ int	ft_printf_args (va_list args, const char format)
 	return (0);
 }
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	size_t i;
-	int len;
-	
+	va_list	args;
+	size_t	i;
+	int		len;
+
 	if (!format)
-		return(-1);
+		return (-1);
 	i = 0;
 	len = 0;
 	va_start(args, format);
@@ -65,8 +65,8 @@ int ft_printf(const char *format, ...)
 // 	printf ("Decimals: %d %ld\n", 1977, 650000L);
 // 	printf ("Preceding with blanks: %10d \n", 1977);
 // 	printf ("Preceding with zeros: %010d \n", 1977);
-// 	printf ("Some different radices: %d %x %o \n", 100, 100, 100));
-// 	printf ("Some different radices: %#x %#o \n", 100, 100));
+// 	printf ("Some different radices: %d %x %o \n", 100, 100, 100);
+// 	printf ("Some different radices: %#x %#o \n", 100, 100);
 // 	printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
 // 	printf ("Width trick: %*d \n", 5, 10);
 // 	printf ("%s \n", "A string");
@@ -75,8 +75,8 @@ int ft_printf(const char *format, ...)
 // 	ft_printf ("Decimals: %d %ld\n", 1977, 650000L);
 // 	ft_printf ("Preceding with blanks: %10d \n", 1977);
 // 	ft_printf ("Preceding with zeros: %010d \n", 1977);
-// 	ft_printf ("Some different radices: %d %x %o \n", 100, 100, 100));
-// 	ft_printf ("Some different radices: %#x %#o \n", 100, 100));
+// 	ft_printf ("Some different radices: %d %x %o \n", 100, 100, 100);
+// 	ft_printf ("Some different radices: %#x %#o \n", 100, 100);
 // 	ft_printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
 // 	ft_printf ("Width trick: %*d \n", 5, 10);
 // 	ft_printf ("%s \n", "A string");

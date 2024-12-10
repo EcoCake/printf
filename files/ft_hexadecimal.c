@@ -6,17 +6,17 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:52:22 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 16:14:02 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/10 17:50:49 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int ft_hexlength(unsigned int n)
+int	ft_hexlength(unsigned int n)
 {
-	int len;
+	int	len;
+
 	len = 0;
-	
 	while (n != 0)
 	{
 		n /= 16;
@@ -24,7 +24,8 @@ int ft_hexlength(unsigned int n)
 	}
 	return (len);
 }
-void ft_hexprint(unsigned int numb, const char format)
+
+void	ft_hexprint(unsigned int numb, const char format)
 {
 	if (numb >= 16)
 	{
@@ -44,7 +45,8 @@ void ft_hexprint(unsigned int numb, const char format)
 		}
 	}
 }
-int ft_hexput(unsigned int numb, const char type)
+
+int	ft_hexput(unsigned int numb, const char type)
 {
 	if (numb == 0)
 		return (ft_putchar('0'));

@@ -6,21 +6,22 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 20:00:53 by amezoe            #+#    #+#             */
-/*   Updated: 2024/12/06 16:14:15 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/12/10 17:49:52 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
 }
+
 int	ft_putstr(char *str)
 {
-	int len;
-	
+	int	len;
+
 	if (!str)
 	{
 		ft_putstr("(null)");
@@ -30,11 +31,12 @@ int	ft_putstr(char *str)
 	write(1, str, len);
 	return (len);
 }
-int ft_putnumb(int n)
+
+int	ft_putnumb(int n)
 {
-	int len;
-	char *str;
-	
+	int		len;
+	char	*str;
+
 	str = ft_itoa(n);
 	len = ft_putstr(str);
 	free(str);
